@@ -3,7 +3,6 @@ import numpy as np
 import copy
 import pygame
 
-
 ## pygame design
 BLACK = (0, 0, 0)
 WHITE = (200, 200, 200)
@@ -72,7 +71,6 @@ def main():
                                     place_figure(indexRect[0], indexRect[1])                    
         pygame.display.flip()
     
-
 def load_game():
     global gameStatus
     global gameMode
@@ -135,7 +133,6 @@ def make_first_move_computer():
         locationy = 2
     place_figure(locationx, locationy)
 
-
 def place_figure(locationx, locationy):
     global players_turn
     rectangle = rectangles[getNunmberMatrix(locationx, locationy) -1]
@@ -183,6 +180,7 @@ def drawGrid():
     for row in range(3):
         marginrow = 10 * row
         for sqaure in range(3):
+            # calculate cell positions based on the size of the cells and the screen
             marginsquare = 10 * sqaure
             CELL_POSITION_WIDTH = CELL_WIDTH * sqaure + marginsquare
             CELL_POSITION_HEIGHT = CELL_HEIGHT * row + marginrow
@@ -192,8 +190,6 @@ def drawGrid():
                                CELL_WIDTH, CELL_HEIGHT)
             pygame.draw.rect(SCREEN, WHITE, rect)
             rectangles.append(rect)
-
-
 
 def has_game_ended(boardend):
     global winner
@@ -284,7 +280,6 @@ def minimize(gameboard):
              minimumutility = utility
              bestMove = [move[0], move[1]]
     return [bestMove, minimumutility]
-
 
 def calculateUtilty(gameboard):
     if has_game_ended(gameboard):
