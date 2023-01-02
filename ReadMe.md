@@ -1,5 +1,5 @@
-# Unbeatable Tic Tac Toe
+# Unbeatable Tic-Tac-Toe
 
-This is an unbeatable Tic Tac Toe game made in Python with pygame
+This is an unbeatable Tic-Tac-Toe game made in Python with pygame
 
-The algorithm used for this code was the minmax algorithm
+The algorithm used for this code is the minmax algorithm
